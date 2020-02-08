@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Library.model
 {
-    class Game
+    public class Game
     {
-       public string title { get; private set; }
-       public string gameSystem { get; private set; } 
-       public string developer { get; private set; }
-       public string type { get; private set; }
-       public int playerAmount { get; private set; }
+       public string title { get;  set; }
+       public string gameSystem { get;  set; } 
+       public string developer { get;  set; }
+       public string type { get;  set; }
+       public int playerAmount { get;  set; }
 
         public Game(string title, string gameSystem, string developer, string type, int playerAmount)
         {
@@ -21,6 +21,9 @@ namespace Library.model
             this.playerAmount = playerAmount;
         }
 
+        public Game()
+        {
 
+        }
     }
 }

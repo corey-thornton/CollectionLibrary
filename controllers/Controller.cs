@@ -1,4 +1,5 @@
-﻿using Library.model;
+﻿using Library.IO;
+using Library.model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Library.controllers
         
 
         private CollectionManager manager;
+        private FileWriter fileWriter;
 
         public Controller()
         {
@@ -17,6 +19,7 @@ namespace Library.controllers
 
 
             this.manager = new CollectionManager();
+            this.fileWriter = new FileWriter();
             this.manager.addToGameCollection(game);
         }
 
@@ -32,6 +35,11 @@ namespace Library.controllers
             //Game gameToAdd = new Game;
            // this.games.addGame(gameToAdd);
 
+        }
+
+        public void saveToFile()
+        {
+            this.fileWriter.writeGamesToXmlFile(this.manager.getGames());
         }
     }
 }

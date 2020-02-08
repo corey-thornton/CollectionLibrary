@@ -18,7 +18,8 @@
         <Label Content="Developer" HorizontalAlignment="Left" Margin="67,342,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Type" HorizontalAlignment="Left" Margin="67,377,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="No. Players" HorizontalAlignment="Left" Margin="67,411,0,0" VerticalAlignment="Top" Height="28"/>
-        <Button x:Name="addGameBtn" Content="Button" HorizontalAlignment="Left" Margin="322,285,0,0" VerticalAlignment="Top" Click="addGameButton_Click"/>
+        <Button x:Name="addGameBtn" Content="Add Game" HorizontalAlignment="Left" Margin="322,285,0,0" VerticalAlignment="Top" Click="addGameButton_Click"/>
+        <Button x:Name="saveBtn" Content="Save" HorizontalAlignment="Left" Margin="404,285,0,0" VerticalAlignment="Top" Click="saveBtn_Click"/>
 
     </Grid>
 </Window>
