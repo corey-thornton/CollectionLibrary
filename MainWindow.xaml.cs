@@ -46,5 +46,10 @@ namespace Library
             this.gameGrid.Items.Refresh();
 
         }
+
+        private void saveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.controller.saveToFile();
+        }
     }
 }
