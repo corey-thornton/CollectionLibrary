@@ -1,14 +1,12 @@
 ﻿using Library.IO;
 using Library.model;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Library.controllers
 {
     class Controller
     {
-        
+
 
         private CollectionManager manager;
         private FileWriter fileWriter;
@@ -17,7 +15,7 @@ namespace Library.controllers
 
         public Controller()
         {
-           // var game = new Game("The Legened of Zelda Breath of the Wild", "Nintendo Switch", "Nintendo", "Open World Adventure", 1);
+            // var game = new Game("The Legened of Zelda Breath of the Wild", "Nintendo Switch", "Nintendo", "Open World Adventure", 1);
 
 
             this.manager = new CollectionManager();
@@ -38,7 +36,7 @@ namespace Library.controllers
             this.manager.addToGameCollection(game);
 
             //Game gameToAdd = new Game;
-           // this.games.addGame(gameToAdd);
+            // this.games.addGame(gameToAdd);
 
         }
 
@@ -49,8 +47,8 @@ namespace Library.controllers
 
         private void loadGames()
         {
-          var games =  this.fileLoader.getGamesFromFile();
-            foreach(Game game in games)
+            var games = this.fileLoader.getGamesFromFile();
+            foreach (Game game in games)
             {
                 addNewGame(game);
             }

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Library.model
 {
     public class Game
     {
-       public string title { get;  set; }
-       public string gameSystem { get;  set; } 
-       public string developer { get;  set; }
-       public string type { get;  set; }
-       public int playerAmount { get;  set; }
+        public string title { get; set; }
+        public string gameSystem { get; set; }
+        public string developer { get; set; }
+        public string type { get; set; }
+        public int playerAmount { get; set; }
 
         public Game(string title, string gameSystem, string developer, string type, int playerAmount)
         {

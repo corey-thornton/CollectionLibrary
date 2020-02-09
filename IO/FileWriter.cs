@@ -1,5 +1,4 @@
 ﻿using Library.model;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -20,9 +19,14 @@ namespace Library.IO
         public void writeGamesToXmlFile(ICollection<Game> games)
         {
 
-            Stream fs = new FileStream( "../../../Files/GameFile.xml", FileMode.Create);
+            Stream fs = new FileStream("../../../Files/GameFile.xml", FileMode.Create);
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.OmitXmlDeclaration = true;
+            settings.NewLineOnAttributes = true;
+            settings.Encoding = Encoding.UTF8;
+            XmlWriter writer = XmlWriter.Create(fs, settings);
 
-            XmlWriter writer = new XmlTextWriter(fs, Encoding.Unicode);
 
             this.gameSerializer.Serialize(writer, games);
             writer.Close();

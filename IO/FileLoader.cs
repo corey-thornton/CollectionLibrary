@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace Library.IO
@@ -14,7 +13,7 @@ namespace Library.IO
         {
             this.loadedGames = new List<Game>();
         }
-
+        #region Methods
         private void DeserializeGames(string filename)
         {
             if (filename.Equals(string.Empty) || filename == null)
@@ -42,7 +41,7 @@ namespace Library.IO
                 {
                     Console.WriteLine("there was an error with loading the file");
                 }
-                
+
             }
 
         }
@@ -53,5 +52,6 @@ namespace Library.IO
             return this.loadedGames;
         }
     }
+    #endregion
 }
 
